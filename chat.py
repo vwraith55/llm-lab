@@ -80,8 +80,8 @@ def repl():
             user_input = input('chat> ')
             response = chat.send_message(user_input, temperature=0)
             print(response)
-    except KeyboardInterrupt:
-        print()
+    except (KeyboardInterrupt, EOFError):
+    print()
 
 
 if __name__ == '__main__':
